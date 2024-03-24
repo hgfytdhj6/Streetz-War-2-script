@@ -1,0 +1,29 @@
+-- i made this script but then realized theres a 10s cooldown so im just releasing this. If they ever lower / remove this cooldown in the future just replace "wait(10)" with however long the cooldown is. --
+-- script makes you $1,200 per hour (terrible unless you farm overnight maybe??) --
+-- "-autofarm" starts script "-stop" stops script --
+
+local Loops = {}
+
+game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
+    if Message == "-autofarm" then -- say this to start the autofarm --
+        workspace["Streetz War"]:GetChildren()[3932]["Garage door part"].Part:Destroy()
+        workspace["Streetz War"]:GetChildren()[3932]:GetChildren()[46]:Destroy()
+Loops.autofarm = true
+repeat task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-130, 4, 301) -- box
+wait(.2)
+fireclickdetector(game:GetService("Workspace").Job["Box"].BOX1.ClickDetector)
+repeat wait() until game.Players.LocalPlayer.Backpack:FindFirstChild("Box")
+game.Players.LocalPlayer.Backpack:FindFirstChild("Box").Parent = game.Players.LocalPlayer.Character
+wait(.2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-110, 7, 143) -- truck
+wait(10)
+until not Loops.autofarm
+    end
+end)
+
+game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
+    if Message == "-stop" then -- say this to stop the autofarm --
+        Loops.autofarm = false
+    end
+end)
