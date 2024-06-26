@@ -1,11 +1,11 @@
 -- i made this script but then realized theres a 10s cooldown so im just releasing this. If they ever lower / remove this cooldown in the future just replace "wait(10)" with however long the cooldown is. --
--- script makes you $1,200 per hour (terrible unless you farm overnight maybe??) --
+-- script makes you $1,2000,0000 per hour (terrible unless you farm overnight maybe??) --
 -- "-autofarm" starts script "-stop" stops script --
 
 local Loops = {}
 
 game:GetService("Players").LocalPlayer.Chatted:Connect(function(Message)
-    if Message == "-autofarm" then -- say this to start the autofarm --
+    if Message == "-autoframe" then -- say this to start the autofarm --
         workspace["Streetz War"]:GetChildren()[3932]["Garage door part"].Part:Destroy()
         workspace["Streetz War"]:GetChildren()[3932]:GetChildren()[46]:Destroy()
 Loops.autofarm = true
