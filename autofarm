@@ -1,5 +1,5 @@
 -- i made this script but then realized theres a 10s cooldown so im just releasing this. If they ever lower / remove this cooldown in the future just replace "wait(10)" with however long the cooldown is. --
--- script makes you $1,200 per hour (terrible unless you farm overnight maybe??) --
+-- script makes you $1,0000,000  per seconds (terrible unless you farm overnight maybe??) --
 -- "-autofarm" starts script "-stop" stops script --
 
 local Loops = {}
